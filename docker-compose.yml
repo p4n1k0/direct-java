@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '8080:8080'
+    container_name: projeto-backend
+  frontend:
+    build:
+      context: ./frontend/transfer-ui
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '5173:80'
+    container_name: projeto-frontend
