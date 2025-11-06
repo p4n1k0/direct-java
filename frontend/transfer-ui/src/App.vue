@@ -15,7 +15,7 @@ import TransferList from './components/TransferList.vue'
 const transfers = ref([])
 
 const fetchTransfers = async () => {
-  const res = await axios.get('http://localhost:8080/api/transfers')
+  const res = await axios.get('/api/transfers')
   transfers.value = res.data
 }
 
