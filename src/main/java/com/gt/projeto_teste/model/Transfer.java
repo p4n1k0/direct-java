@@ -38,7 +38,6 @@ public class Transfer {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -46,7 +45,6 @@ public class Transfer {
     public String getOriginAccount() {
         return originAccount;
     }
-
     public void setOriginAccount(String originAccount) {
         this.originAccount = originAccount;
     }
@@ -54,7 +52,6 @@ public class Transfer {
     public String getDestinationAccount() {
         return destinationAccount;
     }
-
     public void setDestinationAccount(String destinationAccount) {
         this.destinationAccount = destinationAccount;
     }
@@ -62,7 +59,6 @@ public class Transfer {
     public BigDecimal getAmount() {
         return amount;
     }
-
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
@@ -70,7 +66,6 @@ public class Transfer {
     public BigDecimal getFee() {
         return fee;
     }
-
     public void setFee(BigDecimal fee) {
         this.fee = fee;
     }
@@ -78,7 +73,6 @@ public class Transfer {
     public LocalDate getTransferDate() {
         return transferDate;
     }
-
     public void setTransferDate(LocalDate transferDate) {
         this.transferDate = transferDate;
     }
@@ -86,7 +80,6 @@ public class Transfer {
     public LocalDate getSchedulingDate() {
         return schedulingDate;
     }
-
     public void setSchedulingDate(LocalDate schedulingDate) {
         this.schedulingDate = schedulingDate;
     }
@@ -94,7 +87,6 @@ public class Transfer {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
-
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }

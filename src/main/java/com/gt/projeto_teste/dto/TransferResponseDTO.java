@@ -1,27 +1,23 @@
 package com.gt.projeto_teste.dto;
 
-import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class TransferRequestDTO {
+public class TransferResponseDTO {
 
-    @NotBlank
-    @Pattern(regexp = "\\d{10}", message = "Conta de origem deve ter 10 dígitos")
+    private Long id;
     private String originAccount;
-
-    @NotBlank
-    @Pattern(regexp = "\\d{10}", message = "Conta de destino deve ter 10 dígitos")
     private String destinationAccount;
-
-    @NotNull
-    @DecimalMin(value = "0.01", message = "Valor deve ser maior que zero")
     private BigDecimal amount;
-
-    @NotNull
+    private BigDecimal fee;
+    private LocalDate schedulingDate;
     private LocalDate transferDate;
+    private BigDecimal totalAmount;
 
-    public TransferRequestDTO() {}
+    public TransferResponseDTO() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getOriginAccount() { return originAccount; }
     public void setOriginAccount(String originAccount) { this.originAccount = originAccount; }
@@ -32,6 +28,15 @@ public class TransferRequestDTO {
     public BigDecimal getAmount() { return amount; }
     public void setAmount(BigDecimal amount) { this.amount = amount; }
 
+    public BigDecimal getFee() { return fee; }
+    public void setFee(BigDecimal fee) { this.fee = fee; }
+
+    public LocalDate getSchedulingDate() { return schedulingDate; }
+    public void setSchedulingDate(LocalDate schedulingDate) { this.schedulingDate = schedulingDate; }
+
     public LocalDate getTransferDate() { return transferDate; }
     public void setTransferDate(LocalDate transferDate) { this.transferDate = transferDate; }
+
+    public BigDecimal getTotalAmount() { return totalAmount; }
+    public void setTotalAmount(BigDecimal totalAmount) { this.totalAmount = totalAmount; }
 }
