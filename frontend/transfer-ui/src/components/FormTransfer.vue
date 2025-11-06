@@ -14,7 +14,7 @@
     </div>
     <div class="mb-4">
       <label class="block text-gray-700">Data Transferência</label>
-      <input type="date" v-model="transfer.transferData" class="border rounded w-full p-2" required />
+      <input type="date" v-model="transfer.transferDate" class="border rounded w-full p-2" required />
     </div>
     <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Agendar</button>
   </form>
@@ -30,14 +30,14 @@ const transfer = reactive({
   originAccount: '',
   destinationAccount: '',
   amount: 0,
-  transferData: ''
+  transferDate: ''
 })
 
 const submitForm = async () => {
   try {
-    await axios.post('http://localhost:8080/api/transfers', transfer)
+    await axios.post('http://backend:8080/api/transfers', transfer)
     emit('added')
-    Object.assign(transfer, { originAccount: '', destinationAccount: '', amount: 0, transferData: '' })
+    Object.assign(transfer, { originAccount: '', destinationAccount: '', amount: 0, transferDate: '' })
   } catch (e) {
     alert('Erro ao agendar transferência')
   }

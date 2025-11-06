@@ -8,7 +8,9 @@ services:
   frontend:
     build:
       context: ./frontend/transfer-ui
-      dockerfile: Dockerfile.frontend
+      dockerfile: Dockerfile
     ports:
       - '5173:80'
     container_name: projeto-frontend
+    depends_on:
+      - backend

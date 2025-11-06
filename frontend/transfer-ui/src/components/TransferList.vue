@@ -17,7 +17,7 @@
           <td class="p-2 border">{{ t.destinationAccount }}</td>
           <td class="p-2 border">{{ t.amount }}</td>
           <td class="p-2 border">{{ t.fee }}</td>
-          <td class="p-2 border">{{ t.transferData }}</td>
+          <td class="p-2 border">{{ t.transferDate }}</td>
         </tr>
       </tbody>
     </table>
