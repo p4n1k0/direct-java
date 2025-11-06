@@ -35,7 +35,7 @@ const transfer = reactive({
 
 const submitForm = async () => {
   try {
-    await axios.post('http://backend:8080/api/transfers', transfer)
+    await axios.post('/api/transfers', transfer)
     emit('added')
     Object.assign(transfer, { originAccount: '', destinationAccount: '', amount: 0, transferDate: '' })
   } catch (e) {
