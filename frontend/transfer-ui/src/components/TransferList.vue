@@ -15,8 +15,8 @@
         <tr v-for="t in transfers" :key="t.id">
           <td class="p-2 border">{{ t.originAccount }}</td>
           <td class="p-2 border">{{ t.destinationAccount }}</td>
-          <td class="p-2 border">{{ t.amount }}</td>
-          <td class="p-2 border">{{ t.fee }}</td>
+          <td class="p-2 border">{{ t.amount.toFixed(2) }}</td>
+          <td class="p-2 border">{{ t.fee.toFixed(2) }}%</td>
           <td class="p-2 border">{{ t.transferDate }}</td>
         </tr>
       </tbody>

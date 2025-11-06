@@ -10,7 +10,7 @@
     </div>
     <div class="mb-4">
       <label class="block text-gray-700">Valor</label>
-      <input type="number" v-model="transfer.amount" class="border rounded w-full p-2" required />
+      <input type="number" step="0.01" v-model="transfer.amount" class="border rounded w-full p-2" required />
     </div>
     <div class="mb-4">
       <label class="block text-gray-700">Data Transferência</label>
