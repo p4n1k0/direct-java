@@ -16,7 +16,7 @@ frontend/transfer-ui → Interface (Vue 3 + Vite)
 
 ```bash
 cd backend
-mvn clean package -Dskiptests
+mvn clean package -DskipTests
 cd ..
 docker-compose build --no-cache
 docker-compose up -d
